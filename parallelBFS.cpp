@@ -47,7 +47,8 @@ public:
 
                 cout << u << " ";
 
-                for (auto v : adj[u]) {
+                for (int j=0; j < adj[u].size(); j++) {
+                    int v = adj[u][j];
                     if (!visited[v]) {
                         #pragma omp critical
                         {
